@@ -3,6 +3,7 @@
     "description": "Create a launch page for new projects",
     "autoload": {
         "psr-4": {
+            "Uaibo\\Launchpad\\": "src/"
         }
     },
     "authors": [

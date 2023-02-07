@@ -1,0 +1,15 @@
+{
+    "name": "uaibo/launchpad",
+    "description": "Create a launch page for new projects",
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "authors": [
+        {
+            "name": "Altin",
+            "email": "softize@gmail.com"
+        }
+    ],
+    "require": {}
+}

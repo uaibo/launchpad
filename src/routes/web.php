@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/launch', [LaunchpadController::class, 'launchPage'])->name('launchpad.index');
 
 // redirect everything in launchpad mode
-if( config('app.mode') === 'launchpad' ){
+if( env('APP_MODE') === 'launchpad' ){
     Route::get('{any}', function() {
         return redirect(route('launchpad.index'), 302);
         })->where('any', '^(?!launch).*$');

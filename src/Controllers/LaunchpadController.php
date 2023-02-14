@@ -2,7 +2,7 @@
 namespace Uaibo\Launchpad\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Launchpad;
+use Uaibo\Launchpad\Models\Launchpad;
 
 class LaunchpadController
 {
@@ -36,5 +36,5 @@ class LaunchpadController
             'result' => true
         ];
     }
-    
+
 }

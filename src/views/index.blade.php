@@ -893,12 +893,12 @@
             line-height: 2.4rem;
             background-size: 1.2rem;
             border-radius: 0.16rem;
-            background-color: #009e95;
+            background-color: #FF0000;
             transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
         }
 
         #form01 .field button:hover {
-            background-color: #0EB5AC;
+            background-color: #df0808;
         }
 
         #form01 .field button svg {
@@ -938,8 +938,8 @@
         #form01 textarea:focus,
         #form01 select:focus,
         #form01 .file.focus {
-            border-color: #009E95;
-            box-shadow: 0 0 0 1px #009E95;
+            border-color: #FF0000;
+            box-shadow: 0 0 0 1px #FF0000;
         }
 
         #form01 input[type="checkbox"]+label {
@@ -985,8 +985,8 @@
         }
 
         #form01 input[type="checkbox"]:focus+label:before {
-            border-color: #009E95;
-            box-shadow: 0 0 0 1px #009E95;
+            border-color: #FF0000;
+            box-shadow: 0 0 0 1px #FF0000;
         }
 
         #form01 .number>input[type="number"] {
@@ -1029,14 +1029,14 @@
             font-weight: 600;
             border-radius: 0.25rem;
             direction: var(--site-language-direction);
-            background-color: #009e95;
+            background-color: #FF0000;
             color: #FFFFFF;
             transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
             position: relative;
         }
 
         #form01 .actions button:hover {
-            background-color: #0EB5AC;
+            background-color: #df0808;
         }
 
         #form01 .inner .field {
@@ -1713,12 +1713,12 @@
         }
 
         #buttons01 .button {
-            background-color: #009e95;
+            background-color: #FF0000;
             color: #FFFFFF;
         }
 
         #buttons01 .button:hover {
-            background-color: #0EB5AC !important;
+            background-color: #df0808 !important;
         }
 
         .video {
@@ -2703,7 +2703,7 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div id="image01" class="image">
-                                    <img src="{{ asset('_launchpad/assets/images/logo-h.png') }}" alt="" />
+                                    <img src="{{ asset('_launchpad/assets/images/logo-h.png') }}?v=1" alt="" />
                                 </div>
                                 <div id="image02" class="image">
                                     {{--
@@ -2720,12 +2720,12 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div>
-                                    <h1 id="text05">Grow your brand <span style="color: #009e95">with viral contests</span></h1>
-                                    <p id="text04"><span><span style="color: #009e95">ApeContest</span> helps you run fully-branded, multi-language contests so you can:</span><br /> <br />
-                                        <span>💰 Reward your customers</span><br /> <br />
-                                        <span>🚀 Grow your brand awareness</span><br/> <br />
-                                        <span>🔄 Own your data</span><br /> <br />
-                                        <span>👨👩 Find new users</span></p>
+                                    <h1 id="text05">Protect your channel reputation <span style="color: #FF0000">on autopilot!</span></h1>
+                                    <p id="text04"><span><span style="color: #FF0000">ModeraTube</span> helps you protect your Youtube channel reputation by:</span><br /> <br />
+                                        <span>🔥 cleaning your videos from spam comments</span><br /> <br />
+                                        <span>🕷️ remove comments containing bad words</span><br/> <br />
+                                        <span>🤡 banning spam accounts from your channel</span><br /> <br />
+                                        <span>✅ all without you lifting a finger!</span><br /> <br />
                                     <p id="text06"><span>We are currently just finishing up the last details before our first release.</span><br /> <span><strong>Leave your email 👇 to get access once it&#39;s ready!</strong></span></p>
                                     <form enctype="multipart/form-data"
                                         id="form01" method="post" data-autofocus="1">
@@ -2752,7 +2752,7 @@
                             <div class="inner">
                                 <p id="text08">
                                     <strong>Made for makers</strong> 🏗️ by <strong><a href="{{ config('launchpad.maker.reddit.url') }}">{{ config('launchpad.maker.reddit.name') }}</a></strong></p>
-                                <p id="text02">&copy; {{ config('app.name') }}</p>
+                                <p id="text02">&copy;{{ date('Y') }} {{ config('app.name') }}</p>
                             </div>
                         </div>
                     </div>
@@ -2762,7 +2762,7 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div>
-                                    <img src="{{ asset('_launchpad/assets/images/logo-square.png') }}" alt="{{ config('app.name') }}" style="max-width:100px;"/>
+                                    <img src="{{ asset('_launchpad/assets/images/logo-square.png') }}?v=1" alt="{{ config('app.name') }}" style="max-width:75px;"/>
                                 </div>
                                 <h2 id="text03">Thank you!</h2>
                                 <p id="text01">You&#39;ll hear from us soon! We are finishing up our first release and hope it will be live very soon.</p>

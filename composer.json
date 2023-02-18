@@ -1,6 +1,8 @@
 {
     "name": "uaibo/launchpad",
     "description": "Create a launch page for Laravel projects",
+    "license": "MIT",
+    "homepage": "https://github.com/uaibo",
     "authors": [
         {
             "name": "Altin Elezaj",

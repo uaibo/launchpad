@@ -1,7 +1,7 @@
 <?php
 $app_name   = env('APP_NAME');
 $app_title  = env('APP_NAME');
-$app_desc   = $app_name . ' Launch mode';
+$app_desc   = $app_name . ' - Launch mode';
 
 return [
     'name'  => $app_name,

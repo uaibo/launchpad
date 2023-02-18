@@ -1,9 +1,9 @@
 {
     "name": "uaibo/launchpad",
-    "description": "Create a launch page for new projects",
+    "description": "Create a launch page for Laravel projects",
     "authors": [
         {
-            "name": "Altin",
+            "name": "Altin Elezaj",
             "email": "softize@gmail.com"
         }
     ],

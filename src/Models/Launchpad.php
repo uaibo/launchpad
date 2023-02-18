@@ -15,6 +15,9 @@ class Launchpad extends Model
         'email',
         'phone',
         'name',
+        'ip',
+        'source',
+        'country'
     ];
 
 }

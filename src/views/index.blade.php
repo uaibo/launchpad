@@ -9,7 +9,7 @@
     <meta property="og:title" content="{{ config('launchpad.title') }}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ config('launchpad.desc') }}" />
-    <meta property="og:image" content="{{ asset('_launchpad/assets/images/share.png') }}" />
+    <meta property="og:image" content="{{ asset('vendor/uaibo/launchpad/images/share.png') }}" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="800" />
@@ -18,10 +18,10 @@
     <link rel="canonical" href="{{ config('launchpad.url') }}" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,700,700italic%7CPoppins:700,700italic,600,600italic,900,900italic" rel="stylesheet" type="text/css" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/shared/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/shared/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/shared/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ asset('img/shared/favicon/site.webmanifest') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('vendor/uaibo/launchpad/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('vendor/uaibo/launchpad/favicon/site.webmanifest') }}">
 
     <style>
         html,
@@ -511,7 +511,7 @@
         #text04 {
             color: #2B2A2A;
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.875em;
+            /*font-size: 0.875em;*/
             line-height: 1.625;
             font-weight: 400;
         }
@@ -531,7 +531,7 @@
         #text06 {
             color: #2B2B2B;
             font-family: 'Source Sans Pro', sans-serif;
-            font-size: 0.875em;
+            /*font-size: 0.875em;*/
             line-height: 1.625;
             font-weight: 400;
         }
@@ -1889,13 +1889,13 @@
             #text04 {
                 letter-spacing: 0rem;
                 width: 100%;
-                font-size: 0.875em;
+                /*font-size: 0.875em;*/
                 line-height: 1.625;
             }
             #text06 {
                 letter-spacing: 0rem;
                 width: 100%;
-                font-size: 0.875em;
+                /*font-size: 0.875em;*/
                 line-height: 1.625;
             }
             #text03 {
@@ -2489,10 +2489,10 @@
                 font-size: 1.5em;
             }
             #text04 {
-                font-size: 0.875em;
+                /*font-size: 0.875em;*/
             }
             #text06 {
-                font-size: 0.875em;
+                /*font-size: 0.875em;*/
             }
             #text03 {
                 font-size: 1.5em;
@@ -2703,15 +2703,15 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div id="image01" class="image">
-                                    <img src="{{ asset('_launchpad/assets/images/logo-h.png') }}?v=1" alt="" />
+                                    <img src="{{ asset('vendor/uaibo/launchpad/images/logo-h.png') }}?v=1" alt="" />
                                 </div>
                                 <div id="image02" class="image">
                                     {{--
                                     <a href="{{ config('launchpad.maker.url') }}/?utm_source=launchpad&utm_medium=logo&utm_campaign={{ config('app.name') }}">
-                                        <img src="{{ asset('_launchpad/assets/images/sn.png') }}" alt="smartynetwork-studio" />
+                                        <img src="{{ asset('vendor/uaibo/launchpad/images/sn.png') }}" alt="smartynetwork-studio" />
                                     </a>
                                     --}}
-                                    <img src="{{ asset('_launchpad/assets/images/sn.png') }}" alt="smartynetwork-studio" />
+                                    <img src="{{ asset('vendor/uaibo/launchpad/images/sn.png') }}" alt="smartynetwork-studio" />
                                 </div>
                             </div>
                         </div>
@@ -2720,15 +2720,18 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div>
-                                    <h1 id="text05">Protect your channel reputation <span style="color: #FF0000">on autopilot!</span></h1>
+                                    <h1 id="text05">Protect your channel's reputation <span style="color: #FF0000">on autopilot!</span></h1>
                                     <p id="text04"><span><span style="color: #FF0000">ModeraTube</span> helps you protect your Youtube channel reputation by:</span><br /> <br />
                                         <span>🔥 cleaning your videos from spam comments</span><br /> <br />
                                         <span>🕷️ remove comments containing bad words</span><br/> <br />
                                         <span>🤡 banning spam accounts from your channel</span><br /> <br />
                                         <span>✅ all without you lifting a finger!</span><br /> <br />
                                     <p id="text06"><span>We are currently just finishing up the last details before our first release.</span><br /> <span><strong>Leave your email 👇 to get access once it&#39;s ready!</strong></span></p>
-                                    <form enctype="multipart/form-data"
-                                        id="form01" method="post" data-autofocus="1">
+                                    <form enctype="multipart/form-data" id="form01" method="post" data-autofocus="1">
+
+                                        <input type="hidden" name="ip" id="form01-ip" value="{{ $_SERVER['REMOTE_ADDR'] }}" />
+                                        <input type="hidden" name="source" id="form01-source" value="{{ $_SERVER['HTTP_REFERER'] ?? '' }}" />
+
                                         <div class="inner">
                                             <div class="field">
                                                 <input type="email" name="email" id="form01-email" placeholder="Email" maxlength="128" required />
@@ -2741,7 +2744,7 @@
                                 </div>
                                 <div>
                                     {{-- <div id="video01" class="video">
-                                        <video src="{{ asset('_launchpad/assets/videos/video01.mp4') }}" poster="{{ asset('_launchpad/assets/videos/video01.mp4.jpg') }}" playsinline muted autoplay loop></video>
+                                        <video src="{{ asset('vendor/uaibo/launchpad/videos/video01.mp4') }}" poster="{{ asset('vendor/uaibo/launchpad/videos/video01.mp4.jpg') }}" playsinline muted autoplay loop></video>
                                     </div> --}}
                                 </div>
                             </div>
@@ -2751,7 +2754,7 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <p id="text08">
-                                    <strong>Made for makers</strong> 🏗️ by <strong><a href="{{ config('launchpad.maker.reddit.url') }}">{{ config('launchpad.maker.reddit.name') }}</a></strong></p>
+                                    <strong>Made for creators</strong> 🏗️ by <strong><a href="{{ config('launchpad.maker.reddit.url') }}">{{ config('launchpad.maker.reddit.name') }}</a></strong></p>
                                 <p id="text02">&copy;{{ date('Y') }} {{ config('app.name') }}</p>
                             </div>
                         </div>
@@ -2762,7 +2765,7 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div>
-                                    <img src="{{ asset('_launchpad/assets/images/logo-square.png') }}?v=1" alt="{{ config('app.name') }}" style="max-width:75px;"/>
+                                    <img src="{{ asset('vendor/uaibo/launchpad/images/logo-square.png') }}?v=1" alt="{{ config('app.name') }}" style="max-width:75px;"/>
                                 </div>
                                 <h2 id="text03">Thank you!</h2>
                                 <p id="text01">You&#39;ll hear from us soon! We are finishing up our first release and hope it will be live very soon.</p>
@@ -3798,7 +3801,7 @@
                 hid: 'phone',
                 success: '#done',
                 failure: 'Sorry, something went wrong. Please verify your email or try again later.',
-                optional: [],
+                optional: ['ip', 'source'],
             });
         })();
     </script>

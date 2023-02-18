@@ -1,16 +1,28 @@
 {
     "name": "uaibo/launchpad",
     "description": "Create a launch page for new projects",
-    "autoload": {
-        "psr-4": {
-            "Uaibo\\Launchpad\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Altin",
             "email": "softize@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "stevebauman/location": "^6.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uaibo\\Launchpad\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Uaibo\\Launchpad\\LaunchpadServiceProvider"
+            ]
+        }
+    }
 }

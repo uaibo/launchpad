@@ -1,7 +1,7 @@
 <?php
 $app_name   = env('APP_NAME');
 $app_title  = env('APP_NAME');
-$app_desc   = $app_name . ' ApeContest helps you run fully-branded, multi-language contests, grow your audience and find new brand ambassadors. Run contests on your domain, your rules, own your data.';
+$app_desc   = $app_name . ' Launch mode';
 
 return [
     'name'  => $app_name,

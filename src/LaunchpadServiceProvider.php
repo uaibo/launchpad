@@ -1,6 +1,8 @@
 <?php
 namespace Uaibo\Launchpad;
 
+include_once ('helpers/launchpad_func.php');
+
 use Illuminate\Support\ServiceProvider;
 
 class LaunchpadServiceProvider extends ServiceProvider
@@ -40,6 +42,6 @@ class LaunchpadServiceProvider extends ServiceProvider
 
     public function register()
     {
-        
+
     }
 }

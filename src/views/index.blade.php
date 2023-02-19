@@ -2720,7 +2720,12 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div>
-                                    <h1 id="text05">Protect your channel's reputation <span style="color: #FF0000">on autopilot!</span></h1>
+                                    @if( $headline = config('launchpad.content.main_headline.text') )
+                                    <h1 id="text05">
+                                        {{ $headline }} {{ launchpad_get_headline() }}
+                                        Protect your channel's reputation <span style="color: #FF0000">on autopilot!</span>
+                                    </h1>
+                                    @endif
                                     <p id="text04"><span><span style="color: #FF0000">ModeraTube</span> helps you protect your Youtube channel reputation by:</span><br /> <br />
                                         <span>🔥 cleaning your videos from spam comments</span><br /> <br />
                                         <span>🕷️ remove comments containing bad words</span><br/> <br />

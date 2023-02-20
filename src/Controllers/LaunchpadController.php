@@ -9,7 +9,35 @@ class LaunchpadController
 {
     public function launchPage(Request $request)
     {
-        return view('launchpad::index');
+        $brand_color            =   config("launchpad.branding_colors.primary");
+        $headline               =   launchpad_get_styled_text('main_headline');
+        $short_description      =   launchpad_get_styled_text('short_description');
+        $benefits               =   config('launchpad.benefits');
+        $prelaunch_text         =   config('launchpad.prelaunch_text');
+        $leave_your_email_text  =   config('launchpad.leave_your_email_text');
+        $email_field_placeholder=   config('launchpad.email_field_placeholder');
+        $submit_button_text     =   config('launchpad.submit_button_text');
+        $made_for_text          =   config('launchpad.made_for_text');
+        $made_by_link           =   config('launchpad.made_by_link');
+        $made_by_text           =   config('launchpad.made_by_text');
+        $thank_you_text         =   config('launchpad.thank_you_text');
+
+        return view('launchpad::index',
+            compact(
+                'brand_color',
+                'headline',
+                'short_description',
+                'benefits',
+                'prelaunch_text',
+                'leave_your_email_text',
+                'email_field_placeholder',
+                'submit_button_text',
+                'made_for_text',
+                'made_by_link',
+                'made_by_text',
+                'thank_you_text'
+            )
+        );
     }
 
     public function store(Request $request)

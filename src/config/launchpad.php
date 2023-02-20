@@ -9,21 +9,52 @@ return [
     'title' => $app_title,
     'desc'  => $app_desc,
 
-    'content' => [
-        'main_headline' => [
-            'text' => 'Your main punch-line goes here',
-            'highlighted_words' => [
-                'punch-line',
-            ]
+    'branding_colors' => [
+        'primary' => '#FF0000',
+    ],
+
+    'main_headline' => [
+        'text' => 'The fastest way to your launch page!',
+        'highlighted' => [
+            'fastest',
+            'launch',
         ],
-        'short_description' => 'A short description of what your app or service is about.',
-        'features' => [
-            '',
-            '',
-            '',
-            ''
+        'bold' => [
+
         ]
     ],
+
+    'short_description' => [
+        'text' => 'Use Launchpad to launch your project and gain the following benefits',
+        'highlighted' => [
+            'Launchpad',
+        ],
+        'bold' => [
+            
+        ]
+    ],
+
+    'benefits' => [
+        '🔥 shortest time from idea to launch',
+        '🕷️ ready configurations',
+        '🤡 great developer experience and documentation',
+        '✅ validate your idea faster',
+    ],
+
+    'prelaunch_text' => 'We are currently just finishing up the last details before our first release.',
+
+    'leave_your_email_text' => 'Leave your email 👇 to get access once it\'s ready!',
+
+    'email_field_placeholder' => 'Email',
+
+    'submit_button_text' => 'REQUEST ACCESS',
+
+    'made_for_text' => 'Made for creators',
+
+    'made_by_text' => '@smartynetwork',
+    'made_by_link' => 'https://www.reddit.com/user/smartynetwork/',
+
+    'thank_you_text' => 'You\'ll hear from us soon! We are finishing up some more features and hope you will use this package to launch all your future projects.',
 
     'maker' => [
         'url'       =>  'https://smartynetwork.com',

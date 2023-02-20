@@ -893,7 +893,7 @@
             line-height: 2.4rem;
             background-size: 1.2rem;
             border-radius: 0.16rem;
-            background-color: #FF0000;
+            background-color: {{ $brand_color }};
             transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
         }
 
@@ -938,8 +938,8 @@
         #form01 textarea:focus,
         #form01 select:focus,
         #form01 .file.focus {
-            border-color: #FF0000;
-            box-shadow: 0 0 0 1px #FF0000;
+            border-color: {{ $brand_color }};
+            box-shadow: 0 0 0 1px {{ $brand_color }};
         }
 
         #form01 input[type="checkbox"]+label {
@@ -985,8 +985,8 @@
         }
 
         #form01 input[type="checkbox"]:focus+label:before {
-            border-color: #FF0000;
-            box-shadow: 0 0 0 1px #FF0000;
+            border-color: {{ $brand_color }};
+            box-shadow: 0 0 0 1px {{ $brand_color }};
         }
 
         #form01 .number>input[type="number"] {
@@ -1021,7 +1021,6 @@
             height: 3rem;
             line-height: 3rem;
             padding: 0 1.5rem;
-            text-transform: uppercase;
             font-size: 0.625em;
             font-family: 'Poppins', sans-serif;
             letter-spacing: 0.175rem;
@@ -1029,7 +1028,7 @@
             font-weight: 600;
             border-radius: 0.25rem;
             direction: var(--site-language-direction);
-            background-color: #FF0000;
+            background-color: {{ $brand_color }};
             color: #FFFFFF;
             transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
             position: relative;
@@ -1713,7 +1712,7 @@
         }
 
         #buttons01 .button {
-            background-color: #FF0000;
+            background-color: {{ $brand_color }};
             color: #FFFFFF;
         }
 
@@ -2720,18 +2719,31 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <div>
-                                    @if( $headline = config('launchpad.content.main_headline.text') )
+                                    @if( $headline )
                                     <h1 id="text05">
-                                        {{ $headline }} {{ launchpad_get_headline() }}
-                                        Protect your channel's reputation <span style="color: #FF0000">on autopilot!</span>
+                                        {!! $headline !!}
                                     </h1>
                                     @endif
-                                    <p id="text04"><span><span style="color: #FF0000">ModeraTube</span> helps you protect your Youtube channel reputation by:</span><br /> <br />
-                                        <span>🔥 cleaning your videos from spam comments</span><br /> <br />
-                                        <span>🕷️ remove comments containing bad words</span><br/> <br />
-                                        <span>🤡 banning spam accounts from your channel</span><br /> <br />
-                                        <span>✅ all without you lifting a finger!</span><br /> <br />
-                                    <p id="text06"><span>We are currently just finishing up the last details before our first release.</span><br /> <span><strong>Leave your email 👇 to get access once it&#39;s ready!</strong></span></p>
+                                    <p id="text04">
+                                        @if( $short_description )
+                                            {!! $short_description !!}
+                                            <br /> <br />
+                                        @endif
+
+                                        @foreach( $benefits as $benefit )
+                                            {{ $benefit }}<br /><br />
+                                        @endforeach
+                                    </p>
+
+                                    <p id="text06">
+                                        @if( $prelaunch_text )
+                                        {{ $prelaunch_text }}<br />
+                                        @endif
+
+                                        @if( $leave_your_email_text )
+                                        <strong>{{ $leave_your_email_text }}</strong>
+                                        @endif
+                                    </p>
                                     <form enctype="multipart/form-data" id="form01" method="post" data-autofocus="1">
 
                                         <input type="hidden" name="ip" id="form01-ip" value="{{ $_SERVER['REMOTE_ADDR'] }}" />
@@ -2739,13 +2751,19 @@
 
                                         <div class="inner">
                                             <div class="field">
-                                                <input type="email" name="email" id="form01-email" placeholder="Email" maxlength="128" required />
+                                                <input type="email" name="email" id="form01-email" placeholder="{{ $email_field_placeholder }}" maxlength="128" required />
                                             </div>
                                             <div class="field">
                                                 <input type="text" name="phone" id="form01-phone" placeholder="Telephone" maxlength="128" />
                                             </div>
-                                            <div class="actions"><button type="submit">Request Access</button></div>
-                                        </div><input type="hidden" name="id" value="form01" /></form>
+                                            <div class="actions">
+                                                <button type="submit">
+                                                    {{ $submit_button_text }}
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="id" value="form01" />
+                                    </form>
                                 </div>
                                 <div>
                                     {{-- <div id="video01" class="video">
@@ -2759,7 +2777,15 @@
                         <div class="wrapper">
                             <div class="inner">
                                 <p id="text08">
-                                    <strong>Made for creators</strong> 🏗️ by <strong><a href="{{ config('launchpad.maker.reddit.url') }}">{{ config('launchpad.maker.reddit.name') }}</a></strong></p>
+                                    @if( $made_for_text )
+                                        <strong>{{ $made_for_text }}</strong>
+                                    @endif
+                                    🏗️
+                                    by <strong>
+                                        <a href="{{ $made_by_link }}">
+                                            {{ $made_by_text }}
+                                        </a>
+                                    </strong></p>
                                 <p id="text02">&copy;{{ date('Y') }} {{ config('app.name') }}</p>
                             </div>
                         </div>
@@ -2773,7 +2799,9 @@
                                     <img src="{{ asset('vendor/uaibo/launchpad/images/logo-square.png') }}?v=1" alt="{{ config('app.name') }}" style="max-width:75px;"/>
                                 </div>
                                 <h2 id="text03">Thank you!</h2>
-                                <p id="text01">You&#39;ll hear from us soon! We are finishing up our first release and hope it will be live very soon.</p>
+                                @if( $thank_you_text )
+                                    <p id="text01">{{ $thank_you_text }}</p>
+                                @endif
                                 <ul id="buttons01" class="buttons">
                                     <li><a href="#home" class="button n01">Okay</a></li>
                                 </ul>

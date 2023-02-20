@@ -14,10 +14,9 @@ return [
     ],
 
     'main_headline' => [
-        'text' => 'The fastest way to your launch page!',
+        'text' => 'Test the waters before you dive in!',
         'highlighted' => [
-            'fastest',
-            'launch',
+            'dive in'
         ],
         'bold' => [
 
@@ -25,12 +24,12 @@ return [
     ],
 
     'short_description' => [
-        'text' => 'Use Launchpad to launch your project and gain the following benefits',
+        'text' => 'Launchpad helps you create a landing page where potential customers can signup for your future product.',
         'highlighted' => [
             'Launchpad',
         ],
         'bold' => [
-            
+
         ]
     ],
 

@@ -25,18 +25,11 @@ class LaunchpadServiceProvider extends ServiceProvider
             'launchpad'
         );
 
-
         $this->publishes([
             __DIR__.'/config/launchpad.php' =>  config_path('launchpad.php'),
-        ], 'config');
-
-        $this->publishes([
             __DIR__.'/public' => public_path('vendor/uaibo/launchpad'),
-        ], 'assets');
-
-        $this->publishes([
             __DIR__.'/views' => resource_path('vendor/uaibo/launchpad/views'),
-        ], 'views');
+        ], 'launchpad');
 
     }
 

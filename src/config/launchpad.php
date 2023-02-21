@@ -13,6 +13,11 @@ return [
         'primary' => '#FF0000',
     ],
 
+    'logos' => [
+        'main' => null,
+        'square' => null
+    ],
+
     'main_headline' => [
         'text' => 'Test the waters before you dive in!',
         'highlighted' => [
@@ -24,7 +29,7 @@ return [
     ],
 
     'short_description' => [
-        'text' => 'Launchpad helps you create a landing page where potential customers can signup for your future product.',
+        'text' => 'Launchpad helps you create a pre-launch page where potential customers can signup for your future product.',
         'highlighted' => [
             'Launchpad',
         ],
@@ -34,9 +39,9 @@ return [
     ],
 
     'benefits' => [
-        '🔥 shortest time from idea to launch',
-        '🕷️ ready configurations',
-        '🤡 great developer experience and documentation',
+        '🚀 shortest time from idea to pre-launch page',
+        '👌 ready configurations',
+        '🧑‍💻 easy to install and setup',
         '✅ validate your idea faster',
     ],
 

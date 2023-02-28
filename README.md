@@ -73,7 +73,6 @@ Logo shown under the main logo, can be a "created by" logo:
 3) If you also want to show a short video, add the following files:
 
 Video file:
-
 ```
 /vendor/uaibo/launchpad/assets/video.mp4
 ```
@@ -82,3 +81,5 @@ Video poster image:
 /vendor/uaibo/launchpad/assets/video.jpg
 ```
 
+
+![image](https://user-images.githubusercontent.com/19323835/221978589-f9028640-f4de-42dd-9772-172a4b677cc7.png)

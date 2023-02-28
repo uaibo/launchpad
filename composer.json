@@ -1,6 +1,6 @@
 {
     "name": "uaibo/launchpad",
-    "description": "Create a launch page for Laravel projects",
+    "description": "Create a pre-launch page for your Laravel project",
     "license": "MIT",
     "homepage": "https://github.com/uaibo",
     "authors": [

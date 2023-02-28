@@ -1,4 +1,4 @@
-<h1 align="center">Lanchpad</h1>
+<h1 align="center">Lanchpad for Laravel</h1>
 
 <p align="center">
 Create a pre-launch page for your Laravel project.
@@ -11,7 +11,7 @@ Create a pre-launch page for your Laravel project.
 
 ## Installation
 
-Install Launchpad using `composer require`:
+1) Install Launchpad using `composer require`:
 
 ```bash
 composer require uaibo/launchpad
@@ -26,31 +26,34 @@ Add the service provider in `config/app.php`:
 Uaibo\Launchpad\LaunchpadServiceProvider::class
 ```
 
-Publish the configuration file and assets:
+2) Publish the configuration file and assets:
 
 ```bash
 php artisan vendor:publish --tag="launchpad"
 ```
 
-Run migrations:
+3) Run migrations:
 ```
 php artisan migrate
 ```
+This will create the **launchpad** table in your database **where all the signups will be stored**.
 
 
-Add .env variable:
+4) Add .env variable:
 ```
 APP_MODE=launchpad
 ```
 
 ## Configuration
 
-### Customize the content via the config file:
+1) Customize the content via the config file:
 
-```config/launchpad.php```
+```
+config/launchpad.php
+```
 
 
-### Add or replace logos, with your own:
+2) Add or replace logos, with your own:
 
 ```
 /vendor/uaibo/launchpad/assets/logo-wide.png
@@ -67,7 +70,7 @@ Logo shown under the main logo, can be a "created by" logo:
 /vendor/uaibo/launchpad/assets/logo-vendor.png
 ``` 
 
-### If you also want to show a short video, add the following files:
+3) If you also want to show a short video, add the following files:
 
 Video file:
 

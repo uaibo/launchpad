@@ -1,0 +1,36 @@
+{
+    "name": "uaibo/launchpad",
+    "description": "Create a pre-launch page for your Laravel project",
+    "license": "MIT",
+    "homepage": "https://github.com/uaibo",
+    "authors": [
+        {
+            "name": "Altin Elezaj",
+            "email": "dev@smartynetwork.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+        "stevebauman/location": "^6.6",
+        "tectalic/openai": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Uaibo\\Launchpad\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Uaibo\\Launchpad\\LaunchpadServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}

@@ -25,18 +25,17 @@ class LaunchpadController
 
 
         $openai = new OpenAI();
-        $keyword = 'wordpress optimisation';
+        $keyword = 'wordpress hosting';
     
         $headline = $openai->getMessage("A value-proposition punch-line for a ${keyword} tool as a saas product, in less than 50 characters. Avoid hashtags. Wrap the most important word in a span tag and style text color with ${brand_color}");
         
         $short_description = $openai->getMessage("Write a short description that explains what the user can expect from an early version of this software. It should be in 160 characters of less.");
         
-        $benefits = [
-            $openai->getMessage("Write a main benefit this solution would have for its target audience. It must be iin less than 5 words.  Add a relevant emoji in front of it."),
-            $openai->getMessage("Write another benefit this solution would have for its target audience. It must be iin less than 5 words.  Add a relevant emoji in front of it."),
-            $openai->getMessage("Write another benefit this solution would have for its target audience. It must be iin less than 5 words.  Add a relevant emoji in front of it."),
-            $openai->getMessage("Write another benefit this solution would have for its target audience. It must be iin less than 5 words.  Add a relevant emoji in front of it."),
+        $benefitsStr = [
+            $openai->getMessage("List 4 main benefits for this type of product. Each benefit must be less than 5 words. Start each benefit with a relevant emoji. Avoid any other details or description."),
         ];
+
+        $benefits = explode(PHP_EOL, $benefitsStr[0]);
 
         $headline = str_replace('"', '', $headline);
         $short_description = str_replace('"', '', $short_description);

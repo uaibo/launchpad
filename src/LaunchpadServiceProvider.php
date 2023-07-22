@@ -35,6 +35,6 @@ class LaunchpadServiceProvider extends ServiceProvider
 
     public function register()
     {
-
+        
     }
 }

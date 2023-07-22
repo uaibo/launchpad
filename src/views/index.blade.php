@@ -20,7 +20,8 @@
     <meta property="og:url" content="{{ config('launchpad.url') }}" />
     <meta property="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="{{ config('launchpad.url') }}" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,700,700italic%7CPoppins:700,700italic,600,600italic,900,900italic" rel="stylesheet" type="text/css" />
+    
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('vendor/uaibo/launchpad/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-32x32.png') }}">
@@ -452,7 +453,7 @@
 
         #text08 {
             color: #2B2B2B;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             font-size: 1em;
             line-height: 1.625;
             font-weight: 300;
@@ -472,7 +473,7 @@
 
         #text02 {
             color: rgba(59, 59, 59, 0.4);
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             font-size: 0.75em;
             line-height: 1.625;
             font-weight: 300;
@@ -514,7 +515,7 @@
 
         #text04 {
             color: #2B2A2A;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             /*font-size: 0.875em;*/
             line-height: 1.625;
             font-weight: 400;
@@ -534,7 +535,7 @@
 
         #text06 {
             color: #2B2B2B;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             /*font-size: 0.875em;*/
             line-height: 1.625;
             font-weight: 400;
@@ -576,7 +577,7 @@
 
         #text01 {
             color: #2B2B2B;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             font-size: 1em;
             line-height: 1.625;
             font-weight: 300;
@@ -596,7 +597,7 @@
 
         #text07 {
             color: #2B2B2B;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             font-size: 1em;
             line-height: 1.625;
             font-weight: 300;
@@ -919,7 +920,7 @@
         #form01 input[type="checkbox"]+label,
         #form01 .file {
             font-size: 1em;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: 'figtree', sans-serif;
             font-weight: 400;
             border-radius: 0.25rem;
         }
@@ -2700,6 +2701,12 @@
         .launchpad-svg-logo-square{ max-height: 60px; }
         .launchpad-svg-logo path{ fill: {{ config('launchpad.branding_colors.primary') }}; }
 
+        html, body, p, h1, h2, h3, h4, h5, h6, div{
+            font-family: 'figtree' !important;
+        }
+        html, body{
+            background-color: rgb(242, 246, 252) !important;
+        }
     </style>
     <noscript><style>body {overflow: auto !important;}body:after {display: none !important;}#main > .inner {opacity: 1.0 !important;}#main {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}#main > .inner > section {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}</style></noscript></head>
 <body

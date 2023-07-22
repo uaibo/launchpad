@@ -4,7 +4,7 @@ $app_title  = env('APP_NAME');
 $app_desc   = $app_name . ' - Launch mode';
 
 return [
-    'domain' => env('APP_LAUNCHPAD_DOMAINS', '*'),
+    'domain' => env('APP_LAUNCHPAD_DOMAINS', '*'), 
 
     'name'  => $app_name,
     'url'   => env('APP_URL'),

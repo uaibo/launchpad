@@ -669,7 +669,7 @@
         }
 
         #image01 img {
-            width: 7.5rem;
+            width: 115px;
         }
 
         #image02 img {

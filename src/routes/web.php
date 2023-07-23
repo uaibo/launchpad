@@ -14,6 +14,6 @@ if( env('APP_MODE') === 'launchpad' )
         Route::get('{any}', function()
         {
             return redirect(route('launchpad.index'), 302);
-        })->where('any', '^(?!launch).*$');
+        })->where('any', '^(?!launch|login|register).*$');
     });
 }

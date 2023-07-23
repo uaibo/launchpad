@@ -11,7 +11,7 @@
     <meta property="og:description" content="{{ config('launchpad.desc') }}" />
 
     @if( $share_url = launchpad_get_file_url('social.png') )
-        <meta property="og:image" content="{{ $share_url }}" />
+        <meta property="og:image" content="{{ $share_url }}?ver={{ config('launchpad.version') }}" />
     @endif
 
     <meta property="og:image:type" content="image/jpeg" />
@@ -23,9 +23,9 @@
     
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('vendor/uaibo/launchpad/favicon/apple-touch-icon.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('vendor/uaibo/launchpad/favicon/apple-touch-icon.png') }}?ver={{ config('launchpad.version') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-32x32.png') }}?ver={{ config('launchpad.version') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('vendor/uaibo/launchpad/favicon/favicon-16x16.png') }}?ver={{ config('launchpad.version') }}">
     <link rel="manifest" href="{{ asset('vendor/uaibo/launchpad/favicon/site.webmanifest') }}">
 
     <style>

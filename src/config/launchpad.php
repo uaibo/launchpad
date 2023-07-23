@@ -6,6 +6,7 @@ $app_desc   = $app_name . ' - Launch mode';
 return [
     'domain'    => env('APP_LAUNCH_DOMAINS', '*'),
     'path'      => env('APP_LAUNCH_PATH', 'launch'),
+    'version'   => env('APP_LAUNCH_VERSION', '1'),
 
     'name'  => $app_name,
     'url'   => env('APP_URL'),
